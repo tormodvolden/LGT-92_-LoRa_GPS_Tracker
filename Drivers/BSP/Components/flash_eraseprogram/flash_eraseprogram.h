@@ -78,11 +78,10 @@ Maintainer: Miguel Luis and Gregory Cristian
  * @note
  * @retval None
  */
-#define FLASH_USER_FDR_STATE           (FLASH_BASE + FLASH_PAGE_SIZE * 799)        /* FDR state storage */
-#define FLASH_USER_START_ADDR_CONFIG   (FLASH_BASE + FLASH_PAGE_SIZE * 800)        /* Start @ of user Flash area store config */
-#define FLASH_USER_END_ADDR            (FLASH_USER_START_ADDR + FLASH_PAGE_SIZE)   /* End @ of user Flash area store key*/
+#define FLASH_USER_FDR_STATE           (FLASH_BASE + FLASH_PAGE_SIZE * 1019)        /* FDR state storage */
+#define FLASH_USER_START_ADDR_CONFIG   (FLASH_BASE + FLASH_PAGE_SIZE * 1020)        /* Start @ of user Flash area store config */
+#define FLASH_USER_START_ADDR_KEY      (FLASH_BASE + FLASH_PAGE_SIZE * 1022)        /* LORA key storage */
 
-#define FLASH_USER_START_ADDR_KEY      (FLASH_BASE + FLASH_PAGE_SIZE * 802)
 #define EEPROM_USER_Firmware_FLAGS     (DATA_EEPROM_BASE+0x04*22)
 #define EEPROM_IC_HARDWEAR  (DATA_EEPROM_BASE+0x04*21)
 
