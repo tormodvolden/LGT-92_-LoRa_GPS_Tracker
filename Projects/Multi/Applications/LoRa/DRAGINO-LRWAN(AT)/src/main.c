@@ -67,10 +67,6 @@
 /* Private define ------------------------------------------------------------*/
 
 /*!
- * Defines the application data transmission duty cycle. 5s, value in [ms].
- */
-#define Firmware    0x04
-/*!
  * LoRaWAN Adaptive Data Rate
  * @note Please note that when ADR is enabled the end-device should be static
  */
@@ -765,8 +761,8 @@ static void Send( void )
   	
 	AT_PRINTF("Altitude:%.1f%c\r\n ",gps.altitude,gps.altitudeunit);
 	printf_uplink();
-	
-  FLAG = (int)(MD<<6 | LON<<5 | Firmware )& 0xFF;
+
+  FLAG = (int)(MD<<6 | LON<<5 | FIRMWARE_VERSION_MINOR) & 0xFF;
 //	PRINTF("\n\rFLAG=%d  ",FLAG);
 	AppData.Port = LORAWAN_APP_PORT;
 	if(lora_getGPSState() == STATE_GPS_OFF)
